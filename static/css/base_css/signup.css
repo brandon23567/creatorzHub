@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	background-color: #222;
+}
+
+header{
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 1rem;
+}
+header .container{
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2rem;
+}
+
+header .container .logo h2{
+	color: steelblue;
+	font-size: 2rem;
+}
+
+header .container .navbar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .container .navbar li{
+	list-style: none;
+	margin: 0px 1rem;
+}
+
+header .container .navbar li a{
+	text-decoration: none;
+	color: steelblue;
+	font-size: 18px;
+}
+
+.main_content_container{
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.main_content_container h2{
+	color: steelblue;
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+.main_content_container .container .actual_form .single_input{
+	display: flex;
+	flex-direction: column;
+}
+
+.main_content_container .container .actual_form .single_input label{
+	font-size: 19px;
+	margin-bottom: 6px;
+	color: grey;
+}
+
+.main_content_container .container .actual_form .single_input input{
+	width: 100%;
+	padding: 13px 1.2rem;
+	margin-bottom: 20px;
+	color: grey;
+	font-size: 19px;
+	border: 2px solid steelblue;
+}
+
+.main_content_container .container .actual_form .signup_btn{
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	padding: 13px 2rem;
+	cursor: pointer;
+	margin-top: 20px;
+	color: grey;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.main_content_container .container h3{
+	color: grey;
+}

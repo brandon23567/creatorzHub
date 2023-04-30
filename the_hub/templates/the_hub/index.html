@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CreatorzHub</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/hub_css/index.css' %}">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<h2>CreatorzHub</h2>
+			</div>
+			<ul class="navbar">
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'hub_index' %}">CreatorzDen</a></li>
+				<li><a href="{% url 'hub_post' %}">Upload</a></li>
+			</ul>
+		</div>
+	</header>
+	<main class="main_content_container">
+		<div class="container">
+			<div class="posts">
+				{% for post in posts %}
+				<div class="post">
+					<div class="left_side">
+						<a href="{{ post.video_link }}">
+							{{ post.video_link }}
+						</a>
+					</div>
+					<div class="right_side">
+						<h3>{{ post.title }}</h3>
+						<p>
+							{{ post.short_description }}
+						</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="platforms">
+				<h4>Platforms to promote your videos</h4>
+				<div class="platforms_container">
+					<div class="single_platform">
+						<li><a href="https://www.facebook.com">FaceBook</a></li>
+					</div>
+					<div class="single_platform">
+						<li><a href="https://www.twitter.com">Twitter</a></li>
+					</div>
+					<div class="single_platform">
+						<li><a href="https://www.instagram.com">Instagram</a></li>
+					</div>
+					<div class="single_platform">
+						<li><a href="https://www.pinterest.com">Pinterest</a></li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

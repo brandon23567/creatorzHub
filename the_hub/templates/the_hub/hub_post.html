@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CreatorzHub</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/hub_css/hub_post.css' %}">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<h2>CreatorzHub</h2>
+			</div>
+			<ul class="navbar">
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'hub_index' %}">CreatorzDen</a></li>
+				<li><a href="{% url 'upload_post' %}">Upload</a></li>
+				<li><a href="{% url 'signout' %}">Log Out</a></li>
+			</ul>
+		</div>
+	</header>
+	<main class="main_content_container">
+		<h2>Upload your video link here</h2>
+		<div class="container">
+			<form class="actual_form" method="post" action="">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button type="submit" class="post_btn">Post</button>
+			</form>
+		</div>
+	</main>
+</body>
+</html>
